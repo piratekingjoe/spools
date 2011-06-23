@@ -21,6 +21,7 @@
 	width:768px;
 	height:570px;
 	z-index:1;
+	overflow:hidden;
 }
 #topBarContainer {
 	position:absolute;
@@ -236,7 +237,7 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	top: 36px;
 	background-image:url(../image/baseball_bg.png);
 }
-#msMySpoolsBG {
+.msMySpoolsBG {
 	position:absolute;
 	width:676px;
 	height:451px;
@@ -327,4 +328,7 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	font-size:22px;
 	font-family:Hauser, Arial, Helvetica, sans-serif;
 	text-shadow: rgba(0, 0, 0, 1) 5px 5px 7px;
+}
+.active{
+	background-image:url(../image/baseball_bg.png);
 }

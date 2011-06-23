@@ -50,7 +50,7 @@
     </div>
     </div>
   <div id="backgroundDiv">
-    <div id="msMySpoolsBG">
+    <div class="msMySpoolsBG">
       <div class="msTitle">MY SPOOLS</div>
       <div class="msGameFrame">
 <div id="GameSectionHeader">
@@ -72,13 +72,13 @@ Results
 </div>
 </div>
 </div><iframe src="gamerow5.html"
-height="324" width="610" style="overflow-x:hidden;" frameborder="0" scrolling="yes">
+height="288" width="610" style="overflow-x:hidden;" frameborder="0" scrolling="yes">
 Your browser does not support IFrames.</iframe>
 	  </div>
       <div class="msStatsContainer">
         <div class="msStatsLogo">STATS:</div>
       </div>
-    </div>
+    </div><!--
   <div id="msGamesBG">
       <div class="msTitle">GAMES</div>
       <div id="msInviteFriend">+ INVITE A FRIEND</div>
@@ -109,7 +109,7 @@ Your browser does not support IFrames.</iframe>
 		<div class="msStatsContainer">
         <div class="msStatsLogo">STATS:</div>
 	  </div>
-      </div>
+      </div>-->
       </div>
 <!-- END   Insert the gamefield header stuff -->
 <!-- BEGIN Insert the gametable -->
@@ -149,10 +149,6 @@ Your browser does not support IFrames.</iframe>
           -->
 </div>
 
-<div style="border:2px outset black; z-index:1000; float: right" class="bbMenuTitle">
-    blah blah
-</div>
-
 <!-- <script type="text/javascript" src="js/gamerowData01.js"></script> -->
 <script type="text/javascript">
 var GameHeader = [{GRGameHeader: "Game", GRDateHeader: "Date", GRFinalHeader: "Final", GRMyPicksHeader: "My Picks", GRResultsHeader: "Results"}];
@@ -166,24 +162,33 @@ var GameRows = [
     ];
 </script>
 <script>
-    alert("CAT HERE");
+    //alert("CAT HERE");
     function goJoePaint () {
     $("div.bbMenuTitle").click(function () {
-        alert("CAT did a click");
+        //alert("CAT did a click");
     });
     $("div.bbMySpoolsSection").click(function () {
-        alert("CAT did a click on My Spools");
-        $("div.msGameFrame").slideUp(1000);
-        $("div.msGameFrameA").slideDown(1000);
+        //alert("CAT did a click on My Spools")
+		var $target = $("div.msMySpoolsBG");
+        if ( $target.hasClass(".active") ) {
+		//alert("CAT did a click on My Spools");		
+		//$('div').removeClass('.active');
+        }
+        else {
+		$('div.msMySpoolsBG').animate({"left": "-=800px"}, {duration: 500}).addClass('.active');
+		}
+        //$("div#msGamesBG").animate({"left": "+=800px"}, {duration: 500});
+		//$("div#msGamesBG").slideUp(1000);
+        //$("div#msMySpoolsBG").slideDown(1000);
     });
     $("div.bbGamesSection").click(function () {
-        alert("CAT did a click on Games Section");
-        $("div.msGameFrameA").slideUp(1000);
-        $("div.msGameFrame").slideDown(1000);
+        //alert("CAT did a click on Games Section");
+        //$("div#msMySpoolsBG").slideUp(1000);
+        $("div.msMySpoolsBG").animate({"left": "+=800px"}, {duration: 500}).removeClass('.active');
     });
     $( "#gameFieldGenerator" ).tmpl( GameRows )
         .appendTo( "#GameSection" );
-    alert("CAT finished");
+    //alert("CAT finished");
     };
 </script>
 </body>
