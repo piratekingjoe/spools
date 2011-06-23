@@ -116,7 +116,7 @@
 	color:#FC0;
 	font-family:"Score Board";
 }
-#bottomBarContainer {
+.bottomBarContainer {
 	position:absolute;
 	width:768px;
 	height:91px;
@@ -246,7 +246,7 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	top: 4px;
 	left: 46px;
 }
-#msGamesBG {
+.msGamesBG {
 	position:absolute;
 	width:676px;
 	height:451px;
@@ -330,5 +330,5 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	text-shadow: rgba(0, 0, 0, 1) 5px 5px 7px;
 }
 .active{
-	background-image:url(../image/baseball_bg.png);
+	background-position:0px 15px;
 }

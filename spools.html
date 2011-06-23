@@ -29,7 +29,7 @@
         </div>
     </div>
   </div>
-  <div id="bottomBarContainer">
+  <div class="bottomBarContainer">
     <div class="bbMySpoolsSection" >
       <div class="bbMenuTitle">MY SPOOLS</div>
     </div>
@@ -78,8 +78,8 @@ Your browser does not support IFrames.</iframe>
       <div class="msStatsContainer">
         <div class="msStatsLogo">STATS:</div>
       </div>
-    </div><!--
-  <div id="msGamesBG">
+    </div>
+  <div class="msGamesBG">
       <div class="msTitle">GAMES</div>
       <div id="msInviteFriend">+ INVITE A FRIEND</div>
 <div class="msGameFrame">
@@ -109,7 +109,7 @@ Your browser does not support IFrames.</iframe>
 		<div class="msStatsContainer">
         <div class="msStatsLogo">STATS:</div>
 	  </div>
-      </div>-->
+      </div>
       </div>
 <!-- END   Insert the gamefield header stuff -->
 <!-- BEGIN Insert the gametable -->
@@ -163,29 +163,54 @@ var GameRows = [
 </script>
 <script>
     //alert("CAT HERE");
+	function deactivate(icon) {
+        alert("CAT did Bar");
+		$(icon).animate({"left": "-=800px"}, {duration: 2000});
+        //$target.hasClass(".active").removeClass('.active');
+	};
     function goJoePaint () {
     $("div.bbMenuTitle").click(function () {
         //alert("CAT did a click");
     });
-    $("div.bbMySpoolsSection").click(function () {
-        //alert("CAT did a click on My Spools")
-		var $target = $("div.msMySpoolsBG");
-        if ( $target.hasClass(".active") ) {
+	
+	
+	$("div.bbMySpoolsSection").click(function () {
+		deactivate ("div.msMySpoolsBG");
+        //alert("CAT did a click on My Spools");
+		//var $target = $("div.msMySpoolsBG").addClass(".active");
+		//if ( $target.hasClass(".active") ) {alert("Target is active")};
+        });
+		
+	$("div.bbGamesSection").click(function () {
+		deactivate ("div.msGamesBG");
+        alert("CAT did a click on Games");
+		$("div.msGamesBG").addClass(".active");
+        });
+        /*if ( $target.hasClass(".active") ) {
 		//alert("CAT did a click on My Spools");		
 		//$('div').removeClass('.active');
         }
         else {
-		$('div.msMySpoolsBG').animate({"left": "-=800px"}, {duration: 500}).addClass('.active');
+		$('div.msMySpoolsBG').animate({"left": "-=800px"}, {duration: 500});
 		}
+		$("div.msGamesBG").animate({"left": "+=800px"}, {duration: 500}).removeClass('.active');
         //$("div#msGamesBG").animate({"left": "+=800px"}, {duration: 500});
 		//$("div#msGamesBG").slideUp(1000);
         //$("div#msMySpoolsBG").slideDown(1000);
     });
     $("div.bbGamesSection").click(function () {
         //alert("CAT did a click on Games Section");
+		var $target = $("div.msGamesBG");
+        if ( $target.hasClass(".active") ) {
+		//alert("CAT did a click on My Spools");		
+		//$('div').removeClass('.active');
+        }
+        else {
+		$('div.msGamesBG').animate({"left": "-=800px"}, {duration: 500});
+		}
         //$("div#msMySpoolsBG").slideUp(1000);
         $("div.msMySpoolsBG").animate({"left": "+=800px"}, {duration: 500}).removeClass('.active');
-    });
+    });*/
     $( "#gameFieldGenerator" ).tmpl( GameRows )
         .appendTo( "#GameSection" );
     //alert("CAT finished");
