@@ -1,0 +1,306 @@
+/* 
+    Document   : gameContainer
+    Created on : Jun 20, 2011, 10:00:34 AM
+    Author     : ChrisT
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+   I think we need to look at DRY and class inheritance
+*/
+
+#gameContainer {
+	position:absolute;
+	width:768px;
+	height:570px;
+	z-index:1;
+}
+#topBarContainer {
+	position:absolute;
+	width:100%;
+	height:53px;
+	z-index:5;
+	background-image:url(../image/tb_bg.png);
+}
+#spoolsLogo {
+	position:absolute;
+	width:120px;
+	height:25px;
+	z-index:5;
+	top: 5px;
+	left: 10px;
+	background-image:url(../image/spools_logo.png);
+}
+#tbStatsContainer {
+	position:relative;
+	float:right;
+	width:480px;
+	height:36px;
+	z-index:5;
+}
+.tbStatsSplit {
+	position:relative;
+	float:left;
+	width:50%;
+	height:36px;
+	z-index:5;
+}
+#tbLevelText {
+	position:absolute;
+	width:50px;
+	height:18px;
+	z-index:5;
+	top: 10px;
+	color:white;
+	font-size:14px;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+}
+#tbLevelScoreboardContainer {
+	position:absolute;
+	width:158px;
+	height:26px;
+	z-index:5;
+	left: 51px;
+	top: 6px;
+	background-image:url(../image/long_scorebar.png);
+}
+#tbLevelScoreboard {
+	position:absolute;
+	width:150px;
+	height:17px;
+	z-index:5;
+	left: 4px;
+	top: 4px;
+	text-align:right;
+	font-size:17px;
+	color: #FC0;
+	font-family:"Score Board";
+}
+#tbTokensText {
+	position:absolute;
+	width:56px;
+	height:18px;
+	z-index:5;
+	top: 10px;
+	color:white;
+	font-size:14px;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+}
+
+#tbTokensScoreboardContainer {
+	position:absolute;
+	width:158px;
+	height:26px;
+	z-index:5;
+	left: 57px;
+	top: 6px;
+	background-image:url(../image/long_scorebar.png);
+}
+#tbTokensScoreboard {
+	position:absolute;
+	width:150px;
+	height:17px;
+	z-index:5;
+	left: 4px;
+	top: 4px;
+	text-align:right;
+	font-size:17px;
+	color:#FC0;
+	font-family:"Score Board";
+}
+#bottomBarContainer {
+	position:absolute;
+	width:768px;
+	height:91px;
+	z-index:5;
+	top: 479px;
+	background-image:url(../image/bb_bg.png);
+}
+.bbMySpoolsSection {
+	position:relative;
+	width:128px;
+	height:78px;
+	float:left;
+	z-index:2;
+	top:13px;
+	background-image:url(../image/myspools_icon_rollover.png);
+	background-repeat:no-repeat;
+	background-position: 28px 26px;
+}
+.bbMySpoolsSection:link { background-position: 28px 26px; }
+.bbMySpoolsSection:visited { background-position: 28px 26px; }
+.bbMySpoolsSection:active { background-position: 28px -81px; }
+.bbMySpoolsSection:hover { background-position: 28px -81px; }
+.bbGamesSection {
+	position:relative;
+	width:128px;
+	height:78px;
+	float:left;
+	z-index:2;
+	top:13px;
+	background-image:url(../image/games_icon_rollover.png);
+	background-repeat:no-repeat;
+	background-position: 28px 26px;
+}
+.bbGamesSection:link { background-position: 28px 26px; }
+.bbGamesSection:visited { background-position: 28px 26px; }
+.bbGamesSection:active { background-position: 28px -81px; }
+.bbGamesSection:hover { background-position: 28px -81px; }
+.bbStandingsSection {
+	position:relative;
+	width:128px;
+	height:78px;
+	float:left;
+	z-index:2;
+	top:13px;
+	background-image:url(../image/standings_icon_rollover.png);
+	background-repeat:no-repeat;
+	background-position: 28px 26px;
+}
+.bbStandingsSection:link { background-position: 28px 26px; }
+.bbStandingsSection:visited { background-position: 28px 26px; }
+.bbStandingsSection:active { background-position: 28px -81px; }
+.bbStandingsSection:hover { background-position: 28px -81px; }
+.bbMarketSection {
+	position:relative;
+	width:128px;
+	height:78px;
+	float:left;
+	z-index:2;
+	top:13px;
+	background-image:url(../image/market_icon_rollover.png);
+	background-repeat:no-repeat;
+	background-position: 28px 26px;
+}
+.bbMarketSection:link { background-position: 28px 26px; }
+.bbMarketSection:visited { background-position: 28px 26px; }
+.bbMarketSection:active { background-position: 28px -81px; }
+.bbMarketSection:hover { background-position: 28px -81px; }
+.bbSettingsSection {
+	position:relative;
+	width:128px;
+	height:78px;
+	float:left;
+	z-index:2;
+	top:13px;
+	background-image:url(../image/settings_icon_rollover.png);
+	background-repeat:no-repeat;
+	background-position: 28px 26px;
+}
+.bbSettingsSection:link { background-position: 28px 26px; }
+.bbSettingsSection:visited { background-position: 28px 26px; }
+.bbSettingsSection:active { background-position: 28px -81px; }
+.bbSettingsSection:hover { background-position: 28px -81px; }
+.bbLogoutSection {
+	position:relative;
+	width:128px;
+	height:78px;
+	float:left;
+	z-index:2;
+	top:13px;
+	background-image:url(../image/logout_icon_rollover.png);
+	background-repeat:no-repeat;
+	background-position: 28px 26px;
+}
+.bbLogoutSection:link { background-position: 28px 26px; }
+.bbLogoutSection:visited { background-position: 28px 26px; }
+.bbLogoutSection:active { background-position: 28px -81px; }
+.bbLogoutSection:hover { background-position: 28px -81px; }
+.bbMenuTitle {
+	position:relative;
+	width:100%;
+	height:18px;
+	z-index:2;
+	top: 6px;
+	color:white;
+	font-size:16px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+}
+a.bbMenuLinks:link {  text-decoration:none; color:white; text-shadow: rgba(0,0,0,0) 2px 2px 3px; }
+a.bbMenuLinks:visited { text-decoration:none; color:white; text-shadow: rgba(0,0,0,0) 2px 2px 3px; }
+a.bbMenuLinks:active { text-decoration:none; color:white; text-shadow: rgba(0,0,0,1) 2px 2px 3px; }
+a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0,1) 2px 2px 3px;}
+#backgroundDiv {
+	position:absolute;
+	width:768px;
+	height:457px;
+	z-index:-5;
+	top: 36px;
+	background-image:url(../image/baseball_bg.png);
+}
+#msMySpoolsBG {
+	position:absolute;
+	width:676px;
+	height:451px;
+	z-index:2;
+	background-image:url(../image/mainsection_bg_image.png);
+	top: 4px;
+	left: 46px;
+}
+.msTitle {
+	position:absolute;
+	width:200px;
+	height:25px;
+	z-index:2;
+	top: 24px;
+	left: 32px;
+	color:white;
+	font-size:22px;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+	text-shadow: rgba(0, 0, 0, 1) 5px 5px 7px;
+}
+.msGameFrame {
+	position:absolute;
+	width:610px;
+	height:324px;
+	z-index:2;
+	left: 32px;
+	top: 61px;
+}
+.msGameFrameA {
+	position:absolute;
+        background-image:url(../image/baseball_bg.png);
+        /* visibility:hidden; */
+	width:610px;
+	height:324px;
+	z-index:10;
+	left: 32px;
+	top: 61px;
+}
+.msGameFrameB {
+	position:absolute;
+	width:610px;
+	height:324px;
+	z-index:2;
+	left: 32px;
+	top: 61px;
+}
+.msStatsContainer {
+	position:absolute;
+	width:610px;
+	height:26px;
+	z-index:2;
+	left: 32px;
+	top: 400px;
+	background-image:url(../image/stats_gr_bg.png);
+	background-repeat:no-repeat;
+}
+.msStatsLogo {
+	position:relative;
+	width:113px;
+	height:26px;
+	z-index:3;
+	float:left;
+	text-align:center;
+	color:white;
+	font-size:22px;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+	text-shadow: rgba(0, 0, 0, 1) 3px 3px 7px;
+	background-image:url(../image/stats_logo_bg.png);
+	background-repeat:no-repeat;
+}
+

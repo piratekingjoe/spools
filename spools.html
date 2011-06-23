@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SPools</title>
+<!-- -->
+<link rel="stylesheet" type="text/css" href="css/gameContainer.css" />
+<link rel="stylesheet" type="text/css" href="css/gamerow.css" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tmpl.js"></script>
+</head>
+<body onload="goJoePaint()" leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
+<div id="gameContainer">
+  <div id="topBarContainer">
+    <div id="spoolsLogo"></div>
+    <div id="tbStatsContainer">
+    	<div class="tbStatsSplit">
+          <div id="tbLevelText">LEVEL</div>
+          <div id="tbLevelScoreboardContainer">
+          	<div id="tbLevelScoreboard">AMATEAUR</div>
+          </div>
+   	  	</div>
+        <div class="tbStatsSplit">
+        	<div id="tbTokensText">TOKENS</div>
+            <div id="tbTokensScoreboardContainer">
+            	<div id="tbTokensScoreboard">5236</div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div id="bottomBarContainer">
+    <div class="bbMySpoolsSection" >
+      <div class="bbMenuTitle">MY SPOOLS</div>
+    </div>
+    <div class="bbGamesSection">
+    	<div class="bbMenuTitle">GAMES</div>
+    </div>   
+    <div class="bbStandingsSection">
+    	<div class="bbMenuTitle">STANDINGS</div>
+    </div>
+    <div class="bbMarketSection">
+    	<div class="bbMenuTitle">MARKET</div>
+    </div>
+     <div class="bbSettingsSection">
+    	<div class="bbMenuTitle">SETTINGS</div>
+    </div>
+    <div class="bbLogoutSection">
+    	<div class="bbMenuTitle">LOGOUT</div>
+    </div>
+    </div>
+  <div id="backgroundDiv">
+    <div id="msMySpoolsBG">
+      <div class="msTitle">MY SPOOLS</div>
+      <div class="msGameFrameA"></div>
+      <div class="msGameFrame">
+          <!-- BEGIN Insert the gamefield header stuff -->
+<div id="GameSectionContainer">
+<div id="GameSectionHeader">
+<div id="GameRowHeader">
+<div id="GRGameHeader">Game</div>
+<div id="GRDateHeader">Date</div>
+<div id="GRFinalHeader">Final</div>
+<div id="GRMyPicksHeader">My Picks</div>
+<div id="GRResultsHeader">Results</div>
+</div>
+</div>
+<div id="GameSectionBG"></div>
+<div id="GameSection"></div>
+</div>
+<!-- END   Insert the gamefield header stuff -->
+<!-- BEGIN Insert the gametable -->
+<!-- <script id="gameFieldGenerator" src="js/gamerowFieldGenerator.js" type="text/x-jquery-tmpl"></script> -->
+<script id="gameFieldGenerator" type="text/x-jquery-tmpl">
+<div id="${sportbg}">
+<div id="${sportimg}">
+<div id="GRGame">${teamh}<br/>vs<br/>${teama}</div>
+</div>
+<div id="GRBgChange"></div>
+<div id="GRDateSection">
+<div id="GRTopRow">${month}/${date}/${year}</div>
+<div id="GRBottomRow">${time}</div>
+</div>
+<div id="GRFinalSection">
+<div id="GRTopRow">${scoreh} - ${scorea}</div>
+<div id="GRBottomRow">${victor}</div>
+</div>
+<div id="GRMyPicksSection">
+<div id="GRTopRow">SPools: ${spools}</div>
+<div id="GRBottomRow">Pick: ${mypick}</div>
+</div>
+<div id="GRResultsSection">
+<div id="GRTopRow">Tokens: ${winnings}</div>
+<div id="GRBottomRow">EXP: + ${experience}</div>
+</div>
+</div>
+</script>
+<!-- END Insert the gametable -->
+          <!--
+          <iframe   src="gamerow4.php"
+                    height="324" width="610"
+                    style="overflow-x:hidden;"
+                    frameborder="0" scrolling="yes">
+            Your browser does not support IFrames.
+          </iframe>
+          -->
+	  </div>
+      <div class="msStatsContainer">
+        <div class="msStatsLogo">STATS:</div>
+      </div>
+              </div>
+    </div>
+  </div>
+
+<div style="border:2px outset black; z-index:1000; float: right" class="bbMenuTitle">
+    blah blah
+</div>
+
+<!-- <script type="text/javascript" src="js/gamerowData01.js"></script> -->
+<script type="text/javascript">
+var GameHeader = [{GRGameHeader: "Game", GRDateHeader: "Date", GRFinalHeader: "Final", GRMyPicksHeader: "My Picks", GRResultsHeader: "Results"}];
+var GameRows = [
+        { sportbg: "GRMLB", sportimg: "GRSportMLB", teamh: "Cubs", teama: "Cardinals", scoreh: "2", scorea: "3", month:"1", date:"25", year:"11", time:"7:15 pm", mypick:"Cardinals", spools:"3", winnings:"+25", experience:"50", victor:"Cardinals" },
+        { sportbg: "GRNFL", sportimg: "GRSportNFL", teamh: "Packers", teama: "Vikings", scoreh: "42", scorea: "35", month:"1", date:"25", year:"11", time:"7:15pm", mypick:"Packers", spools:"3", winnings:"+25", experience:"50", victor:"Packers" },
+        { sportbg: "GRMLB", sportimg: "GRSportMLB", teamh: "Cubs", teama: "Cardinals", scoreh: "42", scorea: "35", month:"1", date:"25", year:"11", time:"7:15pm", mypick:"Cardinals", spools:"3", winnings:"+25", experience:"50", victor:"Cardinals" },
+        { sportbg: "GRMLB", sportimg: "GRSportMLB", teamh: "Cubs", teama: "Cardinals", scoreh: "42", scorea: "35", month:"1", date:"25", year:"11", time:"7:15pm", mypick:"Cardinals", spools:"3", winnings:"+25", experience:"50", victor:"Cardinals" },
+        { sportbg: "GRMLB", sportimg: "GRSportMLB", teamh: "Cubs", teama: "Cardinals", scoreh: "42", scorea: "35", month:"1", date:"25", year:"11", time:"7:15pm", mypick:"Cardinals", spools:"3", winnings:"+25", experience:"50", victor:"Cardinals" },
+        { sportbg: "GRMLB", sportimg: "GRSportMLB", teamh: "Cubs", teama: "Cardinals", scoreh: "42", scorea: "35", month:"1", date:"25", year:"11", time:"7:15pm", mypick:"Cardinals", spools:"3", winnings:"+25", experience:"50", victor:"Cardinals" }
+    ];
+</script>
+<script>
+    alert("CAT HERE");
+    function goJoePaint () {
+    $("div.bbMenuTitle").click(function () {
+        alert("CAT did a click");
+    });
+    $("div.bbMySpoolsSection").click(function () {
+        alert("CAT did a click on My Spools");
+        $("div.msGameFrame").slideUp(1000);
+        $("div.msGameFrameA").slideDown(1000);
+    });
+    $("div.bbGamesSection").click(function () {
+        alert("CAT did a click on Games Section");
+        $("div.msGameFrameA").slideUp(1000);
+        $("div.msGameFrame").slideDown(1000);
+    });
+    $( "#gameFieldGenerator" ).tmpl( GameRows )
+        .appendTo( "#GameSection" );
+    alert("CAT finished");
+    };
+</script>
+</body>
+</html>

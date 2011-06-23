@@ -1,0 +1,255 @@
+/* 
+    Document   : gamerow
+    Created on : Jun 20, 2011, 9:20:23 AM
+    Author     : ChrisT
+    Description:
+        gamerow.css for gamerow.js used by spools.html
+        target tag is id 
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+   Put notes here and the IDE will pick up crap
+   I also need to get the auto documenting stuff going so you can see that
+*/
+
+#GameSectionContainer {
+	position:absolute;
+	width:593px;
+	height:100%;
+	top:0px;
+	left:0px;
+	z-index:1;
+	border:0px;
+	color:white;
+	font-size:16px;
+	font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+}
+#GameSectionHeader {
+	position:relative;
+	width:593px;
+	height:36px;
+	z-index:2;
+	border:0px;
+}
+#GameSection {
+	position:relative;
+	width:593px;
+	height:100%;
+	z-index:1;
+	border:0px;
+}
+#GameSectionBG {
+	position:absolute;
+	top:35px;
+	width:593px;
+	height:290px;
+	z-index:0;
+	border:0px;
+	background-image:url(../image/infowindow_bg.png);
+	background-repeat:no-repeat;
+}
+#GameRowHeader {
+	position:relative;
+	width:593px;
+	height:36px;
+	z-index:2;
+	border:0px;
+	color:white;
+	background-image:url(../image/header_gr_bg.png);
+	position:fixed;
+	color:#DDD;
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-shadow: rgba(0,0,0,1) 1px 1px 3px;
+	font-weight:bold;
+}
+#GRNFL {
+	position:relative;
+	width:593px;
+	height:72px;
+	z-index:1;
+	border:0px;
+	background-image:url(../image/nfl_gr_bg.png);
+	color:white;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-shadow: rgba(0,0,0,0.5) 1px 1px 3px;
+	font-weight:bold;
+}
+#GRSportNFL {
+	position:relative;
+	width:156px;
+	height:72px;
+	z-index:1;
+	border:0px;
+	float:left;
+	background-image:url(../image/nfl_gr_image.png);
+	background-repeat:no-repeat;
+	background-position:top;
+}
+#GRMLB {
+	position:relative;
+	width:593px;
+	height:72px;
+	z-index:1;
+	border:0px;
+	background-image:url(../image/mlb_gr_bg.png);
+	color:white;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-shadow: rgba(0,0,0,0.5) 1px 1px 3px;
+	font-weight:bold;
+}
+#GRSportMLB {
+	position:relative;
+	width:156px;
+	height:72px;
+	z-index:1;
+	border:0px;
+	float:left;
+	background-image:url(../image/mlb_gr_image.png);
+	background-repeat:no-repeat;
+	background-position:top;
+}
+#GRGame {
+	width:156px;
+	height:60px;
+	position:absolute;
+	top:6px;
+	z-index:1;
+	border:0px;
+	text-align:center;
+	color:white;
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-shadow: rgba(0,0,0,1) 1px 1px 3px;
+	font-weight:bold;
+}
+#GRBgChange {
+	width:436px;
+	height:72px;
+	position:absolute;
+	left:157px;
+	z-index:0;
+	border:0px;
+	background-image:url(../image/gr_data_bg.png);
+
+}
+#GRDateSection {
+	width:82px;
+	height:72px;
+	position:absolute;
+	left:157px;
+	z-index:1;
+	border:0px;
+	text-align:center;
+	background-image:url(../image/gr_seperator.png);
+	background-repeat:no-repeat;
+}
+#GRFinalSection {
+	width:112px;
+	height:72px;
+	position:absolute;
+	left:240px;
+	z-index:1;
+	border:0px;
+	text-align:center;
+	background-image:url(../image/gr_seperator.png);
+	background-repeat:no-repeat;
+}
+#GRMyPicksSection {
+	width:136px;
+	height:72px;
+	position:absolute;
+	left:353px;
+	z-index:1;
+	border:0px;
+	text-align:center;
+	background-image:url(../image/gr_seperator.png);
+	background-repeat:no-repeat;
+}
+#GRResultsSection {
+	width:103px;
+	height:72px;
+	position:absolute;
+	left:490px;
+	z-index:1;
+	border:0px;
+	text-align:center;
+	background-image:url(../image/gr_seperator.png);
+	background-repeat:no-repeat;
+}
+#GRTopRow {
+	position:absolute;
+	width:100%;
+	height:20px;
+	z-index:1;
+	top: 10px;
+	border:0px;
+	text-align:center;
+}
+#GRBottomRow {
+	position:absolute;
+	width:100%;
+	height:20px;
+	z-index:1;
+	top: 46px;
+	border:0px;
+	text-align:center;
+}
+#GRGameHeader {
+	width:156px;
+	height:20px;
+	position:absolute;
+	top:7px;
+	z-index:1;
+	border:0px;
+	float:left;
+	text-align:center;
+}
+#GRDateHeader {
+	width:82px;
+	height:20px;
+	position:absolute;
+	top:7px;
+	left:157px;
+	z-index:1;
+	border:0px;
+	float:left;
+	text-align:center;
+}
+#GRFinalHeader {
+	width:112px;
+	height:20px;
+	position:absolute;
+	top:7px;
+	left:240px;
+	z-index:1;
+	border:0px;
+	float:left;
+	text-align:center;
+}
+#GRMyPicksHeader {
+	width:136px;
+	height:20px;
+	position:absolute;
+	top:7px;
+	left:353px;
+	z-index:1;
+	border:0px;
+	float:left;
+	text-align:center;
+}
+#GRResultsHeader {
+	width:103px;
+	height:20px;
+	position:absolute;
+	top:7px;
+	left:490px;
+	z-index:1;
+	border:0px;
+	float:left;
+	text-align:center;
+}
