@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/gamerow.css" />
+<style type="text/css">
+</style>
+</head>
+<body leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tmpl.js"></script>
+<script type="text/javascript"></script>
+<div id="GameSectionContainer">
+<div id="GameSectionBG">
+</div>
+<div id="GameSection">
+</div>
+</div>
+<script id="gameFieldGenerator" type="text/x-jquery-tmpl">
+<div id="${sportbg}">
+<div id="${sportimg}">
+<div id="GRGame">
+${teamh}<br>vs<br>${teama}
+</div>
+</div>
+<div id="GRBgChange"></div>
+<div id="GRDateSection">
+<div id="GRTopRow">${month}/${date}/${year}</div>
+<div id="GRBottomRow">${time}</div>
+</div>
+<div id="GRFinalSection">
+<div id="GRTopRow">${scoreh} - ${scorea}</div>
+<div id="GRBottomRow">${victor}</div>
+</div>
+<div id="GRMyPicksSection">
+<div id="GRTopRow">SPools: ${spools}</div>
+<div id="GRBottomRow">Pick: ${mypick}</div>
+</div>
+<div id="GRResultsSection">
+<div id="GRTopRow">Tokens: ${winnings}</div>
+<div id="GRBottomRow">EXP: +${experience}</div>
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var GameRows = [
+        { sportbg: "GRMLB", sportimg: "GRSportMLB", teamh: "Cubs", teama: "Cardinals", scoreh: "2", scorea: "3", month:"1", date:"25", year:"11", time:"7:15 pm", mypick:"Cardinals", spools:"3", winnings:"+25", experience:"50", victor:"Cardinals" },
+		{ sportbg: "GRNFL", sportimg: "GRSportNFL", teamh: "Packers", teama: "Vikings", scoreh: "42", scorea: "35", month:"1", date:"25", year:"11", time:"7:15pm", mypick:"Packers", spools:"3", winnings:"+25", experience:"50", victor:"Packers" },
+		{ sportbg: "GRMLB", sportimg: "GRSportMLB", teamh: "Cubs", teama: "Cardinals", scoreh: "42", scorea: "35", month:"1", date:"25", year:"11", time:"7:15pm", mypick:"Cardinals", spools:"3", winnings:"+25", experience:"50", victor:"Cardinals" },
+		{ sportbg: "GRMLB", sportimg: "GRSportMLB", teamh: "Cubs", teama: "Cardinals", scoreh: "42", scorea: "35", month:"1", date:"25", year:"11", time:"7:15pm", mypick:"Cardinals", spools:"3", winnings:"+25", experience:"50", victor:"Cardinals" },
+		{ sportbg: "GRMLB", sportimg: "GRSportMLB", teamh: "Cubs", teama: "Cardinals", scoreh: "42", scorea: "35", month:"1", date:"25", year:"11", time:"7:15pm", mypick:"Cardinals", spools:"3", winnings:"+25", experience:"50", victor:"Cardinals" },
+		{ sportbg: "GRMLB", sportimg: "GRSportMLB", teamh: "Cubs", teama: "Cardinals", scoreh: "42", scorea: "35", month:"1", date:"25", year:"11", time:"7:15pm", mypick:"Cardinals", spools:"3", winnings:"+25", experience:"50", victor:"Cardinals" }
+        
+    ];
+var sports = [
+		{ sport: "NFL", teams: [{ 1:"Patriots", 2:"Broncos" }]},
+		{ sport: "MLB", teams: [ ]}
+	];
+	
+$( "#gameFieldGenerator" ).tmpl( GameRows )
+        .appendTo( "#GameSection" );
+</script> 
+</body>
+</html>

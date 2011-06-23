@@ -13,6 +13,10 @@
    Put notes here and the IDE will pick up crap
    I also need to get the auto documenting stuff going so you can see that
 */
+{
+	margin: 0;
+	padding: 0;
+}
 
 #GameSectionContainer {
 	position:absolute;
@@ -28,7 +32,7 @@
 }
 #GameSectionHeader {
 	position:relative;
-	width:593px;
+	width:610px;
 	height:36px;
 	z-index:2;
 	border:0px;
@@ -52,13 +56,12 @@
 }
 #GameRowHeader {
 	position:relative;
-	width:593px;
+	width:610px;
 	height:36px;
 	z-index:2;
 	border:0px;
 	color:white;
 	background-image:url(../image/header_gr_bg.png);
-	position:fixed;
 	color:#DDD;
 	font-size:16px;
 	font-family:Arial, Helvetica, sans-serif;
