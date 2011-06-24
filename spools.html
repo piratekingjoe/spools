@@ -9,8 +9,35 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.tmpl.js"></script>
-<script type="text/javascript">
-</script>
+<style type="text/css">
+#msNewGameFieldsContainer {
+	position:absolute;
+	width:282px;
+	height:241px;
+	z-index:2;
+	top: 94px;
+	left: 32px;
+}
+.msNewGameFields {
+	position:relative;
+	width:100%;
+	height:30px;
+	z-index:2;
+	float:left;
+}
+.msNewGameFieldsText {
+	position:relative;
+	width:100px;
+	height:30px;
+	z-index:2;
+	float:left;
+	text-align:right;
+	color:white;
+	font-size:14px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+</style>
 </head>
 <body onload="goJoePaint()" leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
 <div id="gameContainer">
@@ -54,7 +81,7 @@
     <div class="bbLogoutSection">
     	<div class="bbMenuTitle">LOGOUT</div>
     </div>
-    </div>
+  </div>
   <div id="backgroundDiv">
     <div id="msMySpoolsBG" class="inactive">
       <div class="msTitle">MY SPOOLS</div>
@@ -91,7 +118,9 @@ Results
     </div>
   <div id="msGamesBG" class="inactive">
       <div class="msTitle">GAMES</div>
-      <div id="msInviteFriend">+ INVITE A FRIEND</div>
+      <a href="javascript:unhide('msNewGameBG');" class="bbMenuLinks">
+      <div id="msCreateGame">+ CREATE A GAME</div>
+      </a>
 <div class="msGameFrame">
 <div id="GameSectionHeader">
 <div id="GameRowHeader">
@@ -118,12 +147,56 @@ Results
 <div class="GameSection">
 </div>
 </div>
-		</div>
-		<div class="msStatsContainer">
-        <div class="msStatsLogo">STATS:</div>
-	  </div>
-      </div>
-      </div>
+</div>
+<div class="msStatsContainer">
+<div class="msStatsLogo">STATS:</div>
+</div>
+</div>
+	<div id="msNewGameBG" class="inactive">
+    <div class="msTitle">CREATE A GAME</div>
+    <div id="msNewGameFieldsContainer">
+    <div class="msNewGameFields">
+    <div class="msNewGameFieldsText">Sport:</div>
+    <form action="" method="get"><select name="sport">
+        	  <option>Baseball</option>
+        	  <option>Basketball</option>
+        	  <option>Cricket</option>
+              <option>Football</option>
+              <option>Hockey</option>
+              <option>Lacrosse</option>
+              <option>Roller Derby</option>
+              <option>Rugby</option>
+              <option>Soccer</option>
+        	</select></form></div>
+    <div class="msNewGameFields">
+    <div class="msNewGameFieldsText">League:</div>
+    <form action="" method="get"><select name="sport">
+        	  <option>Professional Mens</option>
+              <option>Professional Womens</option>
+        	  <option>NCAA Mens</option>
+        	  <option>NCAA Womens</option>
+              <option>High School Mens</option>
+              <option>High School Womens</option>
+        	</select></form>
+    </div>
+    <div class="msNewGameFields">
+    <div class="msNewGameFieldsText">Home Team:</div>
+    </div>
+    <div class="msNewGameFields">
+    <div class="msNewGameFieldsText">Away Team:</div>
+    </div>
+    <div class="msNewGameFields">
+    <div class="msNewGameFieldsText">Game Title:</div>
+    </div>
+    <div class="msNewGameFields">
+ 	<div class="msNewGameFieldsText">Game Date:</div>
+    </div>
+    <div class="msNewGameFields">
+ 	<div class="msNewGameFieldsText">Start Time:</div>
+    </div>
+    </div>
+	</div>
+</div>
 <!-- END   Insert the gamefield header stuff -->
 <!-- BEGIN Insert the gametable -->
 <!-- <script id="gameFieldGenerator" src="js/gamerowFieldGenerator.js" type="text/x-jquery-tmpl"></script> -->
@@ -151,15 +224,6 @@ Results
 </div>
 </div>
 </script>
-<!-- END Insert the gametable -->
-          <!--
-          <iframe   src="gamerow4.php"
-                    height="324" width="610"
-                    style="overflow-x:hidden;"
-                    frameborder="0" scrolling="yes">
-            Your browser does not support IFrames.
-          </iframe>
-          -->
 </div>
 
 <!-- <script type="text/javascript" src="js/gamerowData01.js"></script> -->
@@ -191,12 +255,14 @@ var GameRows = [
 	function unhide(divID) {
  		var item = document.getElementById(divID);
  		if (item.className=='inactive') {
-     	$(".active").animate({"opacity": "1"}, 1000, function()
-        {
-        $(this).removeClass("active").addClass("inactive").animate ({"opacity": "0"}, 1000)/*.css({"left": ""})*/;
+     	$(".active").animate({"opacity": "0"}, 200, function() {
+        $(this).removeClass("active").addClass("inactive");
         });
      	item.className='active';
-     	$("#"+divID).animate({"opacity": "1"}, 1000);
+     	$("#"+divID).css({"opacity": "0"}).delay(200).animate({"opacity": "1"}, 200, function() 
+		{
+        $(this).removeClass("inactive").addClass("active");
+        });
  };
 }
     function goJoePaint () {
