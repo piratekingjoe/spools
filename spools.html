@@ -164,8 +164,18 @@ var GameRows = [
 <script>
     //alert("CAT HERE");
 	function deactivate(icon) {
-        alert("CAT did Bar");
-		$(icon).animate({"left": "-=800px"}, {duration: 2000});
+            alert("CAT deactivate " + icon );
+            $(icon).animate({"left": "-=200px"}, {duration: 2000},
+                function () {
+                    $(icon).animate({"left": "+=400px"}, {duration: 2000});
+                });
+            alert("CAT move2 " + icon );
+        //$target.hasClass(".active").removeClass('.active');
+	};
+	function activate(icon) {
+            alert("CAT activate " + icon );
+            $(icon).animate({"left": "-=800px"}, {duration: 2000});
+            $(icon).addClass('.active');
         //$target.hasClass(".active").removeClass('.active');
 	};
     function goJoePaint () {
@@ -175,17 +185,18 @@ var GameRows = [
 	
 	
 	$("div.bbMySpoolsSection").click(function () {
-		deactivate ("div.msMySpoolsBG");
+		deactivate ("div.active");
+                activate ("div.msMySpoolsBG");
         //alert("CAT did a click on My Spools");
 		//var $target = $("div.msMySpoolsBG").addClass(".active");
 		//if ( $target.hasClass(".active") ) {alert("Target is active")};
         });
 		
 	$("div.bbGamesSection").click(function () {
-		deactivate ("div.msGamesBG");
-        alert("CAT did a click on Games");
-		$("div.msGamesBG").addClass(".active");
-        });
+		deactivate ("div.active");
+                activate ("div.msGamesBG");
+                alert("CAT did a click on Games");
+       });
         /*if ( $target.hasClass(".active") ) {
 		//alert("CAT did a click on My Spools");		
 		//$('div').removeClass('.active');
