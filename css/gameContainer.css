@@ -82,7 +82,7 @@
 	text-align:right;
 	font-size:17px;
 	color: #FC0;
-	font-family:"Score Board";
+	font-family:"Score Board", Arial, Helvetica, sans-serif;
 }
 #tbTokensText {
 	position:absolute;
@@ -114,7 +114,7 @@
 	text-align:right;
 	font-size:17px;
 	color:#FC0;
-	font-family:"Score Board";
+	font-family:"Score Board", Arial, Helvetica, sans-serif;
 }
 .bottomBarContainer {
 	position:absolute;
@@ -237,7 +237,7 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	top: 36px;
 	background-image:url(../image/baseball_bg.png);
 }
-.msMySpoolsBG {
+#msMySpoolsBG {
 	position:absolute;
 	width:676px;
 	height:451px;
@@ -246,7 +246,7 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	top: 4px;
 	left: 46px;
 }
-.msGamesBG {
+#msGamesBG {
 	position:absolute;
 	width:676px;
 	height:451px;
@@ -329,6 +329,9 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	font-family:Hauser, Arial, Helvetica, sans-serif;
 	text-shadow: rgba(0, 0, 0, 1) 5px 5px 7px;
 }
+.inactive {
+	visibility:hidden;
+}
 .active{
-	background-position:0px 15px;
+	visibility:visible;
 }

@@ -9,6 +9,8 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.tmpl.js"></script>
+<script type="text/javascript">
+</script>
 </head>
 <body onload="goJoePaint()" leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
 <div id="gameContainer">
@@ -30,9 +32,11 @@
     </div>
   </div>
   <div class="bottomBarContainer">
+  	<a href="javascript:unhide('msMySpoolsBG');">
     <div class="bbMySpoolsSection" >
       <div class="bbMenuTitle">MY SPOOLS</div>
     </div>
+    </a>
     <div class="bbGamesSection">
     	<div class="bbMenuTitle">GAMES</div>
     </div>   
@@ -50,7 +54,7 @@
     </div>
     </div>
   <div id="backgroundDiv">
-    <div class="msMySpoolsBG">
+    <div id="msMySpoolsBG" class="inactive">
       <div class="msTitle">MY SPOOLS</div>
       <div class="msGameFrame">
 <div id="GameSectionHeader">
@@ -79,7 +83,7 @@ Your browser does not support IFrames.</iframe>
         <div class="msStatsLogo">STATS:</div>
       </div>
     </div>
-  <div class="msGamesBG">
+  <div id="msGamesBG" class="inactive">
       <div class="msTitle">GAMES</div>
       <div id="msInviteFriend">+ INVITE A FRIEND</div>
 <div class="msGameFrame">
@@ -163,29 +167,40 @@ var GameRows = [
 </script>
 <script>
     //alert("CAT HERE");
-	function deactivate(icon) {
-        alert("CAT did Bar");
-		$(icon).animate({"left": "-=800px"}, {duration: 2000});
+	//function deactivate(icon) {
+        //alert("CAT did Bar");
+		//$(icon).animate({"left": "-=800px"}, {duration: 2000});
         //$target.hasClass(".active").removeClass('.active');
-	};
+	//};
+	function unhide(divID) {
+ var item = document.getElementById(divID);
+ if (item) {
+ item.className=(item.className=='inactive')?'active':'inactive';
+ }
+ }
     function goJoePaint () {
     $("div.bbMenuTitle").click(function () {
         //alert("CAT did a click");
     });
 
 
-	$("div.bbMySpoolsSection").click(function () {
-		deactivate ("div.msMySpoolsBG");
+	//$("div.bbMySpoolsSection").click(function () {
+		
+		
+		//deactivate ("div.msMySpoolsBG");
         //alert("CAT did a click on My Spools");
+		//$target.hasClass(".active").removeClass('.active');
 		//var $target = $("div.msMySpoolsBG").addClass(".active");
 		//if ( $target.hasClass(".active") ) {alert("Target is active")};
-        });
+        //});
 
-	$("div.bbGamesSection").click(function () {
-		deactivate ("div.msGamesBG");
-        alert("CAT did a click on Games");
-		$("div.msGamesBG").addClass(".active");
-        });
+	//$("div.bbGamesSection").click(function () {
+		
+		//deactivate ("div.msGamesBG");
+        //alert("CAT did a click on Games");
+		//var $target = $("div.msGamesBG").addClass(".active");
+		//if ( $target.hasClass(".active") ) {alert("Target is active")};
+        //});
         /*if ( $target.hasClass(".active") ) {
 		//alert("CAT did a click on My Spools");		
 		//$('div').removeClass('.active');
