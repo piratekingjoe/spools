@@ -32,7 +32,7 @@
     </div>
   </div>
   <div class="bottomBarContainer">
-  	<a href="javascript:unhide('msMySpoolsBG');">
+  	<a href="javascript:unhide('msMySpoolsBG');" class="bbMenuLinks">
     <div class="bbMySpoolsSection" >
       <div class="bbMenuTitle">MY SPOOLS</div>
     </div>
@@ -173,11 +173,12 @@ var GameRows = [
         //$target.hasClass(".active").removeClass('.active');
 	//};
 	function unhide(divID) {
- var item = document.getElementById(divID);
- if (item) {
- item.className=(item.className=='inactive')?'active':'inactive';
- }
- }
+	 var item = document.getElementById(divID);
+	 if (item.className=='inactive') {item.className='active';};
+	 //if (item) {
+	 //item.className=(item.className=='inactive')?'active':'inactive';
+	 //}
+	 }
     function goJoePaint () {
     $("div.bbMenuTitle").click(function () {
         //alert("CAT did a click");
