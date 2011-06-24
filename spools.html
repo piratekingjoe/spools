@@ -181,19 +181,30 @@ var GameRows = [
 		//$(icon).animate({"left": "-=800px"}, {duration: 2000});
         //$target.hasClass(".active").removeClass('.active');
 	//};
-	function unhide(divID) {
+	/*function unhide(divID) {
   		var item = document.getElementById(divID);
   		if (item.className=='inactive') {
         $(".active").removeClass("active").addClass("inactive");
         item.className='active';
     };
-	}
+	}*/
+	function unhide(divID) {
+ 		var item = document.getElementById(divID);
+ 		if (item.className=='inactive') {
+     	$(".active").animate({"opacity": "1"}, 1000, function()
+        {
+        $(this).removeClass("active").addClass("inactive").animate ({"opacity": "0"}, 1000)/*.css({"left": ""})*/;
+        });
+     	item.className='active';
+     	$("#"+divID).animate({"opacity": "1"}, 1000);
+ };
+}
     function goJoePaint () {
     $("div.bbMenuTitle").click(function () {
         //alert("CAT did a click");
     });
 
-
+	
 	//$("div.bbMySpoolsSection").click(function () {
 		
 		

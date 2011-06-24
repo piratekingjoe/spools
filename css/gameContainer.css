@@ -241,7 +241,6 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	position:absolute;
 	width:676px;
 	height:451px;
-	z-index:2;
 	background-image:url(../image/mainsection_bg_image.png);
 	top: 4px;
 	left: 46px;
@@ -250,7 +249,6 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	position:absolute;
 	width:676px;
 	height:451px;
-	z-index:2;
 	background-image:url(../image/mainsection_bg_image.png);
 	top: 4px;
 	left: 46px;
@@ -331,7 +329,9 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 }
 .inactive {
 	visibility:hidden;
+	z-index:5;
 }
 .active{
 	visibility:visible;
+	z-index:10;
 }
