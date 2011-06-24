@@ -5,7 +5,7 @@
 <title>SPools</title>
 <!-- -->
 <link rel="stylesheet" type="text/css" href="css/gameContainer.css" />
-<link rel="stylesheet" type="text/css" href="css/gamerow.css" />
+<link rel="stylesheet" type="text/css" href="css/gamerow2.css" />
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.tmpl.js"></script>
@@ -37,9 +37,11 @@
       <div class="bbMenuTitle">MY SPOOLS</div>
     </div>
     </a>
+    <a href="javascript:unhide('msGamesBG');" class="bbMenuLinks">
     <div class="bbGamesSection">
     	<div class="bbMenuTitle">GAMES</div>
-    </div>   
+    </div> 
+    </a>  
     <div class="bbStandingsSection">
     	<div class="bbMenuTitle">STANDINGS</div>
     </div>
@@ -75,9 +77,13 @@ My Picks
 Results
 </div>
 </div>
-</div><iframe src="gamerow5.html"
-height="288" width="610" style="overflow-x:hidden;" frameborder="0" scrolling="yes">
-Your browser does not support IFrames.</iframe>
+</div>
+<div id="GameSectionContainer">
+<div id="GameSectionBG">
+</div>
+<div class="GameSection">
+</div>
+</div>
 	  </div>
       <div class="msStatsContainer">
         <div class="msStatsLogo">STATS:</div>
@@ -106,9 +112,12 @@ Results
 </div>
 </div>
 </div>
-<iframe src="gamerow5.html"
-height="288" width="610" style="overflow-x:hidden;" frameborder="0" scrolling="yes">
-Your browser does not support IFrames.</iframe>
+<div id="GameSectionContainer">
+<div id="GameSectionBG">
+</div>
+<div class="GameSection">
+</div>
+</div>
 		</div>
 		<div class="msStatsContainer">
         <div class="msStatsLogo">STATS:</div>
@@ -173,12 +182,12 @@ var GameRows = [
         //$target.hasClass(".active").removeClass('.active');
 	//};
 	function unhide(divID) {
-	 var item = document.getElementById(divID);
-	 if (item.className=='inactive') {item.className='active';};
-	 //if (item) {
-	 //item.className=(item.className=='inactive')?'active':'inactive';
-	 //}
-	 }
+  		var item = document.getElementById(divID);
+  		if (item.className=='inactive') {
+        $(".active").removeClass("active").addClass("inactive");
+        item.className='active';
+    };
+	}
     function goJoePaint () {
     $("div.bbMenuTitle").click(function () {
         //alert("CAT did a click");
@@ -228,7 +237,7 @@ var GameRows = [
         $("div.msMySpoolsBG").animate({"left": "+=800px"}, {duration: 500}).removeClass('.active');
     });*/
     $( "#gameFieldGenerator" ).tmpl( GameRows )
-        .appendTo( "#GameSection" );
+        .appendTo( ".GameSection" );
     //alert("CAT finished");
     };
 </script>
