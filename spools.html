@@ -37,6 +37,196 @@
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight:bold;
 }
+#PGPicksContainer {
+	position:absolute;
+	width:337px;
+	height:98px;
+	z-index:2;
+	left: 12px;
+	top: 12px;
+	background-image:url(/spools/v04/image/games_pick_bg.png);
+	background-repeat:no-repeat;
+}
+#PGSpoolsContainer {
+	position:absolute;
+	width:337px;
+	height:339px;
+	z-index:4;
+	left: 11px;
+	top: 101px;
+	background-image:url(/spools/v04/image/games_spools_bg.png);
+	background-repeat:no-repeat;
+}
+#PGNewsContainer {
+	position:absolute;
+	width:327px;
+	height:242px;
+	z-index:2;
+	left: 338px;
+	top: 7px;
+	background-image:url(/spools/v04/image/games_feed_bg.png);
+	background-repeat:no-repeat;
+}
+#PGResultsContainer {
+	position:absolute;
+	width:326px;
+	height:204px;
+	z-index:2;
+	left: 340px;
+	top: 237px;
+	background-image:url(/spools/v04/image/games_results_bg.png);
+	background-repeat:no-repeat;
+}
+#PGBackContainer {
+	position:absolute;
+	width:59px;
+	height:69px;
+	z-index:2;
+	left: 665px;
+	top: 25px;
+	background-image:url(/spools/v04/image/back_to_games_bg.png);
+	background-repeat:no-repeat;
+}
+#PGPicksInstruction {
+	position:relative;
+	width:100%;
+	height:16px;
+	z-index:4;
+	text-align:center;
+	top:10px;
+	color:white;
+	font-size:14px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#PGPicksSelectionContainer {
+	position:relative;
+	width:100%;
+	height:40px;
+	z-index:4;
+	text-align:center;
+	top:10px;
+}
+#PGHomeTeam {
+	position:absolute;
+	width:140px;
+	height:25px;
+	z-index:4;
+	left: 9px;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+	top: 8px;
+}
+#PGAwayTeam {
+	position:absolute;
+	width:140px;
+	height:25px;
+	z-index:4;
+	left: 185px;
+	top: 8px;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+}
+#PGVS {
+	position:absolute;
+	width:34px;
+	height:18px;
+	z-index:4;
+	left: 150px;
+	top: 12px;
+	color:white;
+	font-size:14px;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#PGGridContainer {
+	position:absolute;
+	width:235px;
+	height:235px;
+	z-index:2;
+	left: 79px;
+	top: 81px;
+}
+#PGGrid {
+	position:relative;
+	width:47px;
+	height:47px;
+	z-index:2;
+	float:left;
+}
+#PGSpoolsNumbersHorizContainer {
+	position:absolute;
+	width:235px;
+	height:16px;
+	z-index:2;
+	left: 79px;
+	top: 60px;
+}
+#PGSpoolsNumbersHoriz {
+	position:relative;
+	width:47px;
+	height:100%;
+	z-index:2;
+	float:left;
+	color:white;
+	font-size:14px;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#PGSpoolsNumbersVerticalContainer {
+	position:absolute;
+	width:27px;
+	height:240px;
+	z-index:2;
+	left: 49px;
+	top: 80px;
+}
+#PGSpoolsNumbersVertical {
+	position:relative;
+	width:100%;
+	height:20%;
+	line-height:48px;
+	z-index:2;
+	float:left;
+	color:white;
+	font-size:14px;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#PGSpoolsHomeTeam {
+	position:absolute;
+	width:235px;
+	height:25px;
+	z-index:4;
+	left: 79px;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+	top: 30px;
+	text-shadow: rgba(0,0,0,1) 2px 2px 3px;
+}
+#PGSpoolsAwayTeam {
+	position:absolute;
+	width:235px;
+	height:25px;
+	z-index:4;
+	left: -86px;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+	top: 187px;
+	text-shadow: rgba(0,0,0,1) 2px 2px 3px;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
 </style>
 </head>
 <body onload="goJoePaint()" leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
@@ -196,6 +386,72 @@ Results
     </div>
     </div>
 	</div>
+    	<div id="msPlayGameBG" class="active">
+        <div id="PGPicksContainer">
+        <div id="PGPicksInstruction">Choose your pick to win:
+        </div>
+        <div id="PGPicksSelectionContainer">
+          <div id="PGHomeTeam">Packers</div>
+          <div id="PGVS">VS</div>
+          <div id="PGAwayTeam">Vikings</div>
+        </div>
+        <div id="PGPicksInstruction">1/25/11 at 7:15 pm EST
+        </div>
+        </div>
+        <div id="PGSpoolsContainer">
+        <div id="PGPicksInstruction">Choose your SPools (Max of 5 Squares):
+        </div>
+        <div id="PGGridContainer">
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        <div id="PGGrid"></div>
+        </div>
+        <div id="PGSpoolsNumbersHorizContainer">
+        <div id="PGSpoolsNumbersHoriz">X/X</div>
+        <div id="PGSpoolsNumbersHoriz">X/X</div>
+        <div id="PGSpoolsNumbersHoriz">X/X</div>
+        <div id="PGSpoolsNumbersHoriz">X/X</div>
+        <div id="PGSpoolsNumbersHoriz">X/X</div>
+        </div>
+        <div id="PGSpoolsNumbersVerticalContainer">
+        <div id="PGSpoolsNumbersVertical">X/X</div>
+        <div id="PGSpoolsNumbersVertical">X/X</div>
+        <div id="PGSpoolsNumbersVertical">X/X</div>
+        <div id="PGSpoolsNumbersVertical">X/X</div>
+        <div id="PGSpoolsNumbersVertical">X/X</div>
+        </div>
+        <div id="PGSpoolsHomeTeam">Packers</div>
+        <div id="PGSpoolsAwayTeam">Vikings</div>
+        </div>
+        <div id="PGNewsContainer">
+        </div>
+        <div id="PGResultsContainer">
+        </div>
+        <div id="PGBackContainer">
+        </div>
+   	</div>
 </div>
 <!-- END   Insert the gamefield header stuff -->
 <!-- BEGIN Insert the gametable -->

@@ -261,6 +261,14 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	top: 4px;
 	left: 46px;
 }
+#msPlayGameBG {
+	position:absolute;
+	width:676px;
+	height:451px;
+	background-image:url(../image/mainsection_bg_image.png);
+	top: 4px;
+	left: 46px;
+}
 .msTitle {
 	position:absolute;
 	width:200px;
