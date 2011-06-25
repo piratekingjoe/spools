@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nested Selects</title>
+<script type="text/javascript" src="../js/jquery-1.5.1.min.js"></script>
+<!-- Reference
+http://php4bd.wordpress.com/2007/07/15/javascript-controlled-dependent-or-cascading-select-list/
+http://www.ajaxray.com/blog/2007/11/08/jquery-controlled-dependent-or-cascading-select-list-2/
+http://www.ajaxray.com/Examples/depend-1.3.x.html
+http://stackoverflow.com/questions/3459896/nested-optgroup-solution-from-drop-down-list
+http://jquery.bassistance.de/treeview/demo/
+http://plugins.jquery.com/project/treeview
+-->
+<script language="javascript">
+function makeSublist(parent,child,isSubselectOptional,childVal)
+{
+	$("body").append("<select style='display:none' id='"+parent+child+"'></select>");
+	$('#'+parent+child).html($("#"+child+" option"));
+
+	var parentValue = $('#'+parent).attr('value');
+	$('#'+child).html($("#"+parent+child+" .sub_"+parentValue).clone());
+
+	childVal = (typeof childVal == "undefined")? "" : childVal ;
+	$("#"+child).val(childVal).attr('selected','selected');
+
+	$('#'+parent).change(function(){
+		var parentValue = $('#'+parent).attr('value');
+		$('#'+child).html($("#"+parent+child+" .sub_"+parentValue).clone());
+		if(isSubselectOptional) $('#'+child).prepend("<option value='none' selected='selected'> -- Select -- </option>");
+		$('#'+child).trigger("change");
+		$('#'+child).focus();
+	});
+}
+
+$(document).ready(function()
+{
+	makeSublist('cgLeague','cgTeam', true, '');
+	makeSublist('cgSport','cgLeague', false, '1');
+});
+</script>
+</head>
+<form>
+<select id="cgSport">
+    <option value="1">Baseball</option>
+    <option value="2">Basketball</option>
+    <option value="3">Cricket</option>
+    <option value="4">Football</option>
+    <option value="5">Hockey</option>
+    <option value="6">Lacrosse</option>
+    <option value="7">Roller Derby</option>
+    <option value="8">Rugby</option>
+    <option value="9">Soccer</option>
+</select>
+<select id="cgLeague">
+	<option class="sub_1" value="1">Professional Mens</option>
+	<option class="sub_1" value="2">Professional Womens</option>
+	<option class="sub_1" value="3">NCAA Mens</option>
+	<option class="sub_1" value="4">NCAA Womens</option>
+	<option class="sub_1" value="5">High School Mens</option>
+	<option class="sub_1" value="6">High School Womens</option>
+</select>
+
+<select id="cgTeam">
+	<option class="sub_1" value="1">Pro Mens 1</option>
+	<option class="sub_1" value="2">Pro Mens 2</option>
+	<option class="sub_1" value="3">Pro Mens 3</option>
+	<option class="sub_2" value="4">Pro Womens 1</option>
+	<option class="sub_2" value="5">Pro Womens 2</option>
+	<option class="sub_3" value="6">NCAA Mens 1</option>
+	<option class="sub_3" value="7">NCAA Mens 2</option>
+	<option class="sub_4" value="8">NCAA Womens 1</option>
+	<option class="sub_4" value="9">NCAA Womens 2</option>
+	<option class="sub_5" value="10">High School Mens 1</option>
+	<option class="sub_5" value="11">High School Mens 2</option>
+	<option class="sub_6" value="12">High School Womens 2</option>
+	<option class="sub_6" value="13">High School Womens 2</option>
+	<option class="sub_6" value="14">High School Womens 3</option>
+</select>
+
+</form>
+
+<body>
+</body>
+</html>
