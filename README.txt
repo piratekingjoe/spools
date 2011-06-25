@@ -31,6 +31,13 @@ GIT if Joe makes a commit on stuff and I've got other stuff
     git stash clear
     git stash list
 
+Joe... so all I had to do to deploy on website was:
+1) ssh into my account.
+2) go to where I wanted the site
+3) git clone git@github.com:piratekingjoe/spools.git
+
+THATS IT!
+
 I'm here.
 
 Y U no work?!
