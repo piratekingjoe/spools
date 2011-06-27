@@ -16,6 +16,8 @@
 	padding: 0;
 }
 
+/* Overall container */
+
 #gameContainer {
 	position:absolute;
 	width:768px;
@@ -23,6 +25,17 @@
 	z-index:1;
 	overflow:hidden;
 }
+#backgroundDiv {
+	position:absolute;
+	width:768px;
+	height:457px;
+	z-index:-5;
+	top: 36px;
+	background-image:url(../image/baseball_bg.png);
+}
+
+/* Top Bar */
+
 #topBarContainer {
 	position:absolute;
 	width:100%;
@@ -94,7 +107,6 @@
 	font-size:14px;
 	font-family:Hauser, Arial, Helvetica, sans-serif;
 }
-
 #tbTokensScoreboardContainer {
 	position:absolute;
 	width:158px;
@@ -116,6 +128,9 @@
 	color:#FC0;
 	font-family:"Score Board", Arial, Helvetica, sans-serif;
 }
+
+/* Bottom Bar */
+
 .bottomBarContainer {
 	position:absolute;
 	width:768px;
@@ -225,25 +240,23 @@
 	text-align:center;
 	font-family:Hauser, Arial, Helvetica, sans-serif;
 }
+
+/* Link Styles */
+
 a.bbMenuLinks:link {  text-decoration:none; color:white; text-shadow: rgba(0,0,0,0) 2px 2px 3px; }
 a.bbMenuLinks:visited { text-decoration:none; color:white; text-shadow: rgba(0,0,0,0) 2px 2px 3px; }
 a.bbMenuLinks:active { text-decoration:none; color:white; text-shadow: rgba(0,0,0,1) 2px 2px 3px; }
 a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0,1) 2px 2px 3px;}
-#backgroundDiv {
-	position:absolute;
-	width:768px;
-	height:457px;
-	z-index:-5;
-	top: 36px;
-	background-image:url(../image/baseball_bg.png);
-}
+
+/* Main Section BG's */
+
 #msMySpoolsBG {
 	position:absolute;
 	width:676px;
 	height:451px;
 	background-image:url(../image/mainsection_bg_image.png);
 	top: 4px;
-	left: 46px;
+	left: 13px;
 }
 #msGamesBG {
 	position:absolute;
@@ -251,7 +264,7 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	height:451px;
 	background-image:url(../image/mainsection_bg_image.png);
 	top: 4px;
-	left: 46px;
+	left: 13px;
 }
 #msNewGameBG {
 	position:absolute;
@@ -259,7 +272,7 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	height:451px;
 	background-image:url(../image/mainsection_bg_image.png);
 	top: 4px;
-	left: 46px;
+	left: 13px;
 }
 #msPlayGameBG {
 	position:absolute;
@@ -267,8 +280,27 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	height:451px;
 	background-image:url(../image/mainsection_bg_image.png);
 	top: 4px;
+	left: 13px;
+}
+#msSettingsBG {
+	position:absolute;
+	width:676px;
+	height:451px;
+	background-image:url(../image/mainsection_bg_image.png);
+	top: 4px;
 	left: 46px;
 }
+#msMarketBG {
+	position:absolute;
+	width:676px;
+	height:451px;
+	background-image:url(../image/mainsection_bg_image.png);
+	top: 4px;
+	left: 46px;
+}
+
+/* Main Section */
+
 .msTitle {
 	position:absolute;
 	width:200px;
@@ -282,24 +314,6 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	text-shadow: rgba(0, 0, 0, 1) 5px 5px 7px;
 }
 .msGameFrame {
-	position:absolute;
-	width:610px;
-	height:324px;
-	z-index:2;
-	left: 32px;
-	top: 61px;
-}
-.msGameFrameA {
-	position:absolute;
-        background-image:url(../image/baseball_bg.png);
-        /* visibility:hidden; */
-	width:610px;
-	height:324px;
-	z-index:10;
-	left: 32px;
-	top: 61px;
-}
-.msGameFrameB {
 	position:absolute;
 	width:610px;
 	height:324px;
@@ -331,6 +345,9 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	background-image:url(../image/stats_logo_bg.png);
 	background-repeat:no-repeat;
 }
+
+/* Create A Game Page */
+
 #msCreateGame {
 	position:absolute;
 	width:200px;
@@ -342,6 +359,288 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 	font-size:22px;
 	font-family:Hauser, Arial, Helvetica, sans-serif;
 }
+#msNewGameFieldsContainer {
+	position:absolute;
+	width:282px;
+	height:241px;
+	z-index:2;
+	top: 94px;
+	left: 32px;
+}
+.msNewGameFields {
+	position:relative;
+	width:100%;
+	height:30px;
+	z-index:2;
+	float:left;
+}
+.msNewGameFieldsText {
+	position:relative;
+	width:100px;
+	height:30px;
+	z-index:2;
+	float:left;
+	text-align:right;
+	color:white;
+	font-size:14px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+
+/* Play Game Container */
+
+#PGPicksContainer {
+	position:absolute;
+	width:337px;
+	height:98px;
+	z-index:2;
+	left: 12px;
+	top: 12px;
+	background-image:url(/spools/v04/image/games_pick_bg.png);
+	background-repeat:no-repeat;
+}
+#PGSpoolsContainer {
+	position:absolute;
+	width:337px;
+	height:339px;
+	z-index:4;
+	left: 11px;
+	top: 101px;
+	background-image:url(/spools/v04/image/games_spools_bg.png);
+	background-repeat:no-repeat;
+}
+#PGNewsContainer {
+	position:absolute;
+	width:327px;
+	height:242px;
+	z-index:2;
+	left: 338px;
+	top: 7px;
+	background-image:url(/spools/v04/image/games_feed_bg.png);
+	background-repeat:no-repeat;
+}
+#PGResultsContainer {
+	position:absolute;
+	width:326px;
+	height:204px;
+	z-index:2;
+	left: 340px;
+	top: 237px;
+	background-image:url(/spools/v04/image/games_results_bg.png);
+	background-repeat:no-repeat;
+}
+
+/* Play Game Picks Section */
+
+#PGPicksInstruction {
+	position:relative;
+	width:100%;
+	height:16px;
+	z-index:4;
+	text-align:center;
+	top:10px;
+	color:white;
+	font-size:14px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#PGPicksSelectionContainer {
+	position:relative;
+	width:100%;
+	height:40px;
+	z-index:4;
+	text-align:center;
+	top:10px;
+}
+#PGHomeTeam {
+	position:absolute;
+	width:140px;
+	height:25px;
+	z-index:4;
+	left: 9px;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+	top: 8px;
+}
+#PGAwayTeam {
+	position:absolute;
+	width:140px;
+	height:25px;
+	z-index:4;
+	left: 185px;
+	top: 8px;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+}
+#PGVS {
+	position:absolute;
+	width:34px;
+	height:18px;
+	z-index:4;
+	left: 150px;
+	top: 12px;
+	color:white;
+	font-size:14px;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#PGGridContainer {
+	position:absolute;
+	width:235px;
+	height:235px;
+	z-index:2;
+	left: 79px;
+	top: 81px;
+}
+#PGGrid {
+	position:relative;
+	width:47px;
+	height:47px;
+	z-index:2;
+	float:left;
+}
+
+/* Play Game SPools Section */
+
+#PGSpoolsNumbersHorizContainer {
+	position:absolute;
+	width:235px;
+	height:16px;
+	z-index:2;
+	left: 79px;
+	top: 60px;
+}
+#PGSpoolsNumbersHoriz {
+	position:relative;
+	width:47px;
+	height:100%;
+	z-index:2;
+	float:left;
+	color:white;
+	font-size:14px;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#PGSpoolsNumbersVerticalContainer {
+	position:absolute;
+	width:27px;
+	height:240px;
+	z-index:2;
+	left: 49px;
+	top: 80px;
+}
+#PGSpoolsNumbersVertical {
+	position:relative;
+	width:100%;
+	height:20%;
+	line-height:48px;
+	z-index:2;
+	float:left;
+	color:white;
+	font-size:14px;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#PGSpoolsHomeTeam {
+	position:absolute;
+	width:235px;
+	height:25px;
+	z-index:4;
+	left: 79px;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+	top: 30px;
+	text-shadow: rgba(0,0,0,1) 2px 2px 3px;
+}
+#PGSpoolsAwayTeam {
+	position:absolute;
+	width:235px;
+	height:25px;
+	z-index:4;
+	left: -86px;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+	top: 187px;
+	text-shadow: rgba(0,0,0,1) 2px 2px 3px;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+/* Link Tabs */
+
+#PGTab1Container {
+	position:absolute;
+	width:93px;
+	height:68px;
+	z-index:2;
+	left: 663px;
+	top: 25px;
+	background-image:url(/spools/v04/image/back_to_games_bg.png);
+	background-repeat:no-repeat;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+}
+#PGTab2Container {
+	position:absolute;
+	width:93px;
+	height:68px;
+	z-index:2;
+	left: 663px;
+	top: 103px;
+	background-image:url(/spools/v04/image/back_to_games_bg.png);
+	background-repeat:no-repeat;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+}
+#PGTab4Container {
+	position:absolute;
+	width:93px;
+	height:68px;
+	z-index:2;
+	left: 663px;
+	top: 347px;
+	background-image:url(/spools/v04/image/back_to_games_bg.png);
+	background-repeat:no-repeat;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	font-family:Hauser, Arial, Helvetica, sans-serif;
+}
+#PGTabContents {
+	position:absolute;
+	width:90px;
+	height:41px;
+	z-index:1;
+	top: 12px;
+}
+#PGTabContents2 {
+	position:absolute;
+	width:90px;
+	height:41px;
+	z-index:1;
+	top: 12px;
+}
+#PGTabContents4 {
+	position:absolute;
+	width:90px;
+	height:41px;
+	z-index:1;
+	top: 12px;
+}
 .inactive {
 	visibility:hidden;
 	z-index:5;
@@ -349,4 +648,10 @@ a.bbMenuLinks:hover { text-decoration:none; color:white; text-shadow: rgba(0,0,0
 .active{
 	visibility:visible;
 	z-index:10;
+}
+.hide {
+    display:none;
+}
+.show {
+    display:block;
 }

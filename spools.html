@@ -10,223 +10,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.tmpl.js"></script>
 <style type="text/css">
-#msNewGameFieldsContainer {
-	position:absolute;
-	width:282px;
-	height:241px;
-	z-index:2;
-	top: 94px;
-	left: 32px;
-}
-.msNewGameFields {
-	position:relative;
-	width:100%;
-	height:30px;
-	z-index:2;
-	float:left;
-}
-.msNewGameFieldsText {
-	position:relative;
-	width:100px;
-	height:30px;
-	z-index:2;
-	float:left;
-	text-align:right;
-	color:white;
-	font-size:14px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight:bold;
-}
-#PGPicksContainer {
-	position:absolute;
-	width:337px;
-	height:98px;
-	z-index:2;
-	left: 12px;
-	top: 12px;
-	background-image:url(/spools/v04/image/games_pick_bg.png);
-	background-repeat:no-repeat;
-}
-#PGSpoolsContainer {
-	position:absolute;
-	width:337px;
-	height:339px;
-	z-index:4;
-	left: 11px;
-	top: 101px;
-	background-image:url(/spools/v04/image/games_spools_bg.png);
-	background-repeat:no-repeat;
-}
-#PGNewsContainer {
-	position:absolute;
-	width:327px;
-	height:242px;
-	z-index:2;
-	left: 338px;
-	top: 7px;
-	background-image:url(/spools/v04/image/games_feed_bg.png);
-	background-repeat:no-repeat;
-}
-#PGResultsContainer {
-	position:absolute;
-	width:326px;
-	height:204px;
-	z-index:2;
-	left: 340px;
-	top: 237px;
-	background-image:url(/spools/v04/image/games_results_bg.png);
-	background-repeat:no-repeat;
-}
-#PGBackContainer {
-	position:absolute;
-	width:59px;
-	height:69px;
-	z-index:2;
-	left: 665px;
-	top: 25px;
-	background-image:url(/spools/v04/image/back_to_games_bg.png);
-	background-repeat:no-repeat;
-}
-#PGPicksInstruction {
-	position:relative;
-	width:100%;
-	height:16px;
-	z-index:4;
-	text-align:center;
-	top:10px;
-	color:white;
-	font-size:14px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-#PGPicksSelectionContainer {
-	position:relative;
-	width:100%;
-	height:40px;
-	z-index:4;
-	text-align:center;
-	top:10px;
-}
-#PGHomeTeam {
-	position:absolute;
-	width:140px;
-	height:25px;
-	z-index:4;
-	left: 9px;
-	color:white;
-	font-size:20px;
-	text-align:center;
-	font-family:Hauser, Arial, Helvetica, sans-serif;
-	top: 8px;
-}
-#PGAwayTeam {
-	position:absolute;
-	width:140px;
-	height:25px;
-	z-index:4;
-	left: 185px;
-	top: 8px;
-	color:white;
-	font-size:20px;
-	text-align:center;
-	font-family:Hauser, Arial, Helvetica, sans-serif;
-}
-#PGVS {
-	position:absolute;
-	width:34px;
-	height:18px;
-	z-index:4;
-	left: 150px;
-	top: 12px;
-	color:white;
-	font-size:14px;
-	text-align:center;
-	font-family: Arial, Helvetica, sans-serif;
-}
-#PGGridContainer {
-	position:absolute;
-	width:235px;
-	height:235px;
-	z-index:2;
-	left: 79px;
-	top: 81px;
-}
-#PGGrid {
-	position:relative;
-	width:47px;
-	height:47px;
-	z-index:2;
-	float:left;
-}
-#PGSpoolsNumbersHorizContainer {
-	position:absolute;
-	width:235px;
-	height:16px;
-	z-index:2;
-	left: 79px;
-	top: 60px;
-}
-#PGSpoolsNumbersHoriz {
-	position:relative;
-	width:47px;
-	height:100%;
-	z-index:2;
-	float:left;
-	color:white;
-	font-size:14px;
-	text-align:center;
-	font-family: Arial, Helvetica, sans-serif;
-}
-#PGSpoolsNumbersVerticalContainer {
-	position:absolute;
-	width:27px;
-	height:240px;
-	z-index:2;
-	left: 49px;
-	top: 80px;
-}
-#PGSpoolsNumbersVertical {
-	position:relative;
-	width:100%;
-	height:20%;
-	line-height:48px;
-	z-index:2;
-	float:left;
-	color:white;
-	font-size:14px;
-	text-align:center;
-	font-family: Arial, Helvetica, sans-serif;
-}
-#PGSpoolsHomeTeam {
-	position:absolute;
-	width:235px;
-	height:25px;
-	z-index:4;
-	left: 79px;
-	color:white;
-	font-size:20px;
-	text-align:center;
-	font-family:Hauser, Arial, Helvetica, sans-serif;
-	top: 30px;
-	text-shadow: rgba(0,0,0,1) 2px 2px 3px;
-}
-#PGSpoolsAwayTeam {
-	position:absolute;
-	width:235px;
-	height:25px;
-	z-index:4;
-	left: -86px;
-	color:white;
-	font-size:20px;
-	text-align:center;
-	font-family:Hauser, Arial, Helvetica, sans-serif;
-	top: 187px;
-	text-shadow: rgba(0,0,0,1) 2px 2px 3px;
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg);
-	transform: rotate(-90deg);
-}
+
 </style>
 </head>
 <body onload="goJoePaint()" leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
@@ -305,12 +89,21 @@ Results
       <div class="msStatsContainer">
         <div class="msStatsLogo">STATS:</div>
       </div>
+        <div id="PGTab1Container" style="line-height:40px;">
+        <a href="javascript:unhide('msMySpoolsBG');" class="bbMenuLinks">
+          <div id="PGTabContents"><span id="span1">Dynasty</span>
+<span id="span2" class="hide" style="line-height:normal;">Coming Soon</span></div>
+</a>
+        </div>
+        <div id="PGTab2Container">
+       <a href="javascript:unhide('msMySpoolsBG');" class="bbMenuLinks">
+          <div id="PGTabContents2"><span id="span1">Trophy Case</span>
+<span id="span2" class="hide" style="line-height:normal;">Coming Soon</span></div>
+</a>
+        </div>
     </div>
   <div id="msGamesBG" class="inactive">
       <div class="msTitle">GAMES</div>
-      <a href="javascript:unhide('msNewGameBG');" class="bbMenuLinks">
-      <div id="msCreateGame">+ CREATE A GAME</div>
-      </a>
 <div class="msGameFrame">
 <div id="GameSectionHeader">
 <div id="GameRowHeader">
@@ -341,6 +134,17 @@ Results
 <div class="msStatsContainer">
 <div class="msStatsLogo">STATS:</div>
 </div>
+<a href="javascript:unhide('msNewGameBG');" class="bbMenuLinks">
+        <div id="PGTab1Container">
+          <div id="PGTabContents">Create a Game</div>
+        </div>
+        </a>
+        <div id="PGTab4Container">
+        <a href="javascript:unhide('msGamesBG');" class="bbMenuLinks">
+          <div id="PGTabContents4"><span id="span1" style="font-size:16px; line-height:20px;">Home Field Advantage</span>
+<span id="span2" class="hide">Coming Soon</span></div>
+        </a>
+        </div>
 </div>
 	<div id="msNewGameBG" class="inactive">
     <div class="msTitle">CREATE A GAME</div>
@@ -385,8 +189,13 @@ Results
  	<div class="msNewGameFieldsText">Start Time:</div>
     </div>
     </div>
+    <a href="javascript:unhide('msGamesBG');" class="bbMenuLinks">
+        <div id="PGTab1Container" style="line-height:40px;">
+          <div id="PGTabContents">Go Back</div>
+        </div>
+        </a>
 	</div>
-    	<div id="msPlayGameBG" class="active">
+    	<div id="msPlayGameBG" class="inactive">
         <div id="PGPicksContainer">
         <div id="PGPicksInstruction">Choose your pick to win:
         </div>
@@ -449,14 +258,23 @@ Results
         </div>
         <div id="PGResultsContainer">
         </div>
-        <div id="PGBackContainer">
+        <a href="javascript:unhide('msGamesBG');" class="bbMenuLinks">
+        <div id="PGTab1Container" style="line-height:40px;">
+          <div id="PGTabContents">Go Back</div>
         </div>
+        </a>
+        <a href="javascript:unhide('msGamesBG');" class="bbMenuLinks">
+        <div id="PGTab2Container">
+          <div id="PGTabContents">Invite To Game</div>
+        </div>
+        </a>
    	</div>
 </div>
 <!-- END   Insert the gamefield header stuff -->
 <!-- BEGIN Insert the gametable -->
 <!-- <script id="gameFieldGenerator" src="js/gamerowFieldGenerator.js" type="text/x-jquery-tmpl"></script> -->
 <script id="gameFieldGenerator" type="text/x-jquery-tmpl">
+<a href="javascript:unhide('msPlayGameBG');" class="bbMenuLinks">
 <div id="${sportbg}">
 <div id="${sportimg}">
 <div id="GRGame">${teamh}<br/>vs<br/>${teama}</div>
@@ -479,6 +297,7 @@ Results
 <div id="GRBottomRow">EXP: + ${experience}</div>
 </div>
 </div>
+</a>
 </script>
 </div>
 
@@ -508,6 +327,30 @@ var GameRows = [
         item.className='active';
     };
 	}*/
+   //alert("joe1");
+var IdAry=['PGTabContents','PGTabContents2','PGTabContents4'];
+            function joefancyshit() {
+ 		for (var zxc0=0;zxc0<IdAry.length;zxc0++){
+ 		var el=document.getElementById(IdAry[zxc0]);
+  		if (el){
+  		 el.onmouseover=function() {
+     	 changeText(this,'hide','show')
+    	 }
+   		 el.onmouseout=function() {
+     	 changeText(this,'show','hide');
+    	 }
+  		}
+ 	}
+};
+function changeText(obj,cl1,cl2) {
+   obj.getElementsByTagName('SPAN')[0].className=cl1;
+   obj.getElementsByTagName('SPAN')[1].className=cl2;
+};
+
+
+
+
+
 	function unhide(divID) {
  		var item = document.getElementById(divID);
  		if (item.className=='inactive') {
@@ -521,54 +364,13 @@ var GameRows = [
         });
  };
 }
+
     function goJoePaint () {
     $("div.bbMenuTitle").click(function () {
         //alert("CAT did a click");
     });
-
-	
-	//$("div.bbMySpoolsSection").click(function () {
-		
-		
-		//deactivate ("div.msMySpoolsBG");
-        //alert("CAT did a click on My Spools");
-		//$target.hasClass(".active").removeClass('.active');
-		//var $target = $("div.msMySpoolsBG").addClass(".active");
-		//if ( $target.hasClass(".active") ) {alert("Target is active")};
-        //});
-
-	//$("div.bbGamesSection").click(function () {
-		
-		//deactivate ("div.msGamesBG");
-        //alert("CAT did a click on Games");
-		//var $target = $("div.msGamesBG").addClass(".active");
-		//if ( $target.hasClass(".active") ) {alert("Target is active")};
-        //});
-        /*if ( $target.hasClass(".active") ) {
-		//alert("CAT did a click on My Spools");		
-		//$('div').removeClass('.active');
-        }
-        else {
-		$('div.msMySpoolsBG').animate({"left": "-=800px"}, {duration: 500});
-		}
-		$("div.msGamesBG").animate({"left": "+=800px"}, {duration: 500}).removeClass('.active');
-        //$("div#msGamesBG").animate({"left": "+=800px"}, {duration: 500});
-		//$("div#msGamesBG").slideUp(1000);
-        //$("div#msMySpoolsBG").slideDown(1000);
-    });
-    $("div.bbGamesSection").click(function () {
-        //alert("CAT did a click on Games Section");
-		var $target = $("div.msGamesBG");
-        if ( $target.hasClass(".active") ) {
-		//alert("CAT did a click on My Spools");		
-		//$('div').removeClass('.active');
-        }
-        else {
-		$('div.msGamesBG').animate({"left": "-=800px"}, {duration: 500});
-		}
-        //$("div#msMySpoolsBG").slideUp(1000);
-        $("div.msMySpoolsBG").animate({"left": "+=800px"}, {duration: 500}).removeClass('.active');
-    });*/
+    joefancyshit();
+    //alert("CAT Started");
     $( "#gameFieldGenerator" ).tmpl( GameRows )
         .appendTo( ".GameSection" );
     //alert("CAT finished");
