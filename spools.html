@@ -168,9 +168,11 @@ function joelogin () {
      <div class="bbSettingsSection">
     	<div class="bbMenuTitle">SETTINGS</div>
     </div>
+    <a href="javascript:joelogout('msGamesBG');" class="bbMenuLinks">
     <div class="bbLogoutSection">
     	<div class="bbMenuTitle">LOGOUT</div>
     </div>
+    </a>
   </div>
   <div id="backgroundDiv">
     <div id="msMySpoolsBG" class="inactive">
@@ -464,7 +466,9 @@ function changeText(obj,cl1,cl2) {
 };
 
 
-
+	function joelogout(divID) {
+		$( "#dialog-form" ).dialog( "open" );
+	};
 
 
 	function unhide(divID) {
