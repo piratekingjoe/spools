@@ -162,13 +162,16 @@ function joelogin () {
     <div class="bbStandingsSection">
     	<div class="bbMenuTitle">STANDINGS</div>
     </div>
+    <a href="javascript:unhide('msMarketBG');" class="bbMenuLinks">
     <div class="bbMarketSection">
     	<div class="bbMenuTitle">MARKET</div>
     </div>
+    </a>
+    <a href="javascript:unhide('msSettingsBG');" class="bbMenuLinks">
      <div class="bbSettingsSection">
     	<div class="bbMenuTitle">SETTINGS</div>
     </div>
-    <a href="javascript:joelogout('msGamesBG');" class="bbMenuLinks">
+    <a href="javascript:joelogout('joerocks');" class="bbMenuLinks">
     <div class="bbLogoutSection">
     	<div class="bbMenuTitle">LOGOUT</div>
     </div>
@@ -307,12 +310,13 @@ Results
  	<div class="msNewGameFieldsText">Start Time:</div>
     </div>
     </div>
+
     <a href="javascript:unhide('msGamesBG');" class="bbMenuLinks">
         <div id="PGTab1Container" style="line-height:40px;">
           <div id="PGTabContents">Go Back</div>
         </div>
         </a>
-	</div>
+</div>
     	<div id="msPlayGameBG" class="inactive">
         <div id="PGPicksContainer">
         <div id="PGPicksInstruction">Choose your pick to win:
@@ -381,12 +385,26 @@ Results
           <div id="PGTabContents">Go Back</div>
         </div>
         </a>
-        <a href="javascript:unhide('msGamesBG');" class="bbMenuLinks">
+        <a href="javascript:unhide('msInviteBG');" class="bbMenuLinks">
         <div id="PGTab2Container">
           <div id="PGTabContents">Invite To Game</div>
         </div>
         </a>
    	</div>
+    <div id="msInviteBG" class="inactive">
+    <div class="msTitle">INVITE TO GAME</div>
+    <a href="javascript:unhide('msPlayGameBG');" class="bbMenuLinks">
+        <div id="PGTab1Container" style="line-height:40px;">
+          <div id="PGTabContents">Go Back</div>
+        </div>
+        </a>
+</div>
+	<div id="msMarketBG" class="inactive">
+	<div class="msTitle">MARKET</div>
+</div>
+	<div id="msSettingsBG" class="inactive">
+	<div class="msTitle">SETTINGS</div>
+</div>
 </div>
 <!-- END   Insert the gamefield header stuff -->
 <!-- BEGIN Insert the gametable -->

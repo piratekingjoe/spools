@@ -4,9 +4,10 @@
 <file name="gamerow5.php" server="ftp.gimbalrock.com/public_html/spools/" local="129533165187180670" remote="129533281200000000" />
 <file name="README.txt" server="ftp.gimbalrock.com/public_html/spools/" local="129533255403620755" remote="129533281800000000" />
 <file name="spools.html" server="ftp.gimbalrock.com/public_html/spools/" local="129533278516182718" remote="129533284800000000" />
-<file name="gamerow5.html" server="ftp.gimbalrock.com/public_html/spools/v04/" local="129533293959686036" remote="129533294400000000" />
-<file name="spools.html" server="ftp.gimbalrock.com/public_html/spools/v04/" local="129535826792078030" remote="129535829400000000" />
-<file name="gamerow5.php" server="ftp.gimbalrock.com/public_html/spools/v04/" local="129533165187180670" remote="129533293200000000" />
-<file name="README.txt" server="ftp.gimbalrock.com/public_html/spools/v04/" local="129533255403620755" remote="129533293200000000" />
-<file name="gamerow6.html" server="ftp.gimbalrock.com/public_html/spools/v04/" local="129534068488513437" remote="129534071400000000" />
+<file name="gamerow5.html" server="ftp.gimbalrock.com/public_html/spools/v04/" local="129533293959686036" remote="129541945200000000" />
+<file name="spools.html" server="ftp.gimbalrock.com/public_html/spools/v04/" local="129541980487046084" remote="129541980600000000" />
+<file name="gamerow5.php" server="ftp.gimbalrock.com/public_html/spools/v04/" local="129533165187180670" remote="129541945200000000" />
+<file name="README.txt" server="ftp.gimbalrock.com/public_html/spools/v04/" local="129534934136174046" remote="129541945800000000" />
+<file name="gamerow6.html" server="ftp.gimbalrock.com/public_html/spools/v04/" local="129534068488513437" remote="129541945200000000" />
+<file name=".gitignore" server="ftp.gimbalrock.com/public_html/spools/v04/" local="129534934136154044" remote="129541945200000000" />
 </dwsync>
